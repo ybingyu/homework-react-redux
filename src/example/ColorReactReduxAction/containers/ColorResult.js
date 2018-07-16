@@ -9,7 +9,8 @@ function ColorResult({
 
 const mapStateToProps = (state, props) => ({
   bgColor: state.colors[state.index] || 'none'
-});
+}
+);
 
 const mapDispatchToProps = (dispatch, props) => (
   {}

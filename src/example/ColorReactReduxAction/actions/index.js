@@ -1,8 +1,4 @@
 import * as actionType from '../actionTypes';
+import { createAction, createActions } from "redux-actions";
 
-export const ChangeColor=index => {
-  // console.log(index)
-  return {
-    type:actionType.CHANGE_COLOR,
-    index
-  }}
+export const ChangeColor = createAction(actionType.CHANGE_COLOR,index=>index)

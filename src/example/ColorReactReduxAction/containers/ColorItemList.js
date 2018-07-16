@@ -8,7 +8,6 @@ function ColorItemList({
   onChangeColor,
   colors
 }){
-  console.log(colors);
   return (
     <div>
       {colors.map((c,i)=>(<ColorItem bgColor={c} index={i} key={i} onClick={onChangeColor}></ColorItem>))}
@@ -21,8 +20,11 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToProps = (dispatch, props) => (
-  console.log(props), {
-    onChangeColor: (index) => dispatch(ChangeColor(index))
+   {
+    onChangeColor: (index) => {
+      console.log(index);
+      dispatch(ChangeColor(index))
+    }
   }
 );
 
